@@ -1,0 +1,12 @@
+const { resolve } = require('path'); // resolve tratar caminho relativo do projeto ( de onde - para onde esta o arquivo que queremos importar  ) 
+
+// criar model e migration no diretorio src diretorio src/app/models
+    // criar diretorio src/database/migration
+    // criar diretorio src/database/seeds ( é uma informação para popular o banco de dados a 1a vez)
+
+module.exports = {   // por enquanto recebe um objeto vazio
+    config: resolve(__dirname, 'src', 'config', 'database.js'), 
+    'models-paths': resolve(__dirname, 'src', 'app', 'models'),
+    'migrations-path': resolve(__dirname, 'src', 'database', 'migrations'),
+    'seeders-path': resolve(__dirname, 'src', 'database', 'seeds'),  
+} 
